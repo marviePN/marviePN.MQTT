@@ -1,0 +1,115 @@
+<html>
+
+<head>
+  <title>MOWS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header id="top">
+    <div id="header">
+      <div class="img-wrap">
+        <img src="myProfile.png" alt="Profile Picture">
+      </div>
+      <div id="name">
+        <p><b>Marvie D. Cauyan</b></p>
+      </div>
+      <div id="topnav">
+        <!-- <nav>
+          <h1>
+            <a id="topnav-active" href="index2.html">MQTT</a>
+
+          </h1>
+        </nav> -->
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <section>
+      <div>
+        <h1>MQTT</h1>
+        <fieldset>
+          <legend>
+            <label for="broker"> Broker </label>
+          </legend>
+          <form>
+            <label for="address">Broker Address:</label>
+            <input id="broker" value="wss://test.mosquitto.org:8081/mqtt"><br>
+          </form>
+        </fieldset>
+        <br>
+        <center>
+          <button id="connect" onclick="connectFunc()">Connect</button>
+        </center>
+
+
+        <fieldset>
+          <legend>
+            <label for="publish">Publish</label>
+          </legend>
+          <form>
+            <label for="topic"> Topic :</label>
+            <input id="pub-topic" placeholder="MQTT"><br>
+            <label for="payload"> Payload : </label>
+            <input id="pub-payload" placeholder="Mows"><br>
+          </form>
+        </fieldset>
+        <br>
+        <center>
+          <button id="publish" onclick="publishFunc()">Publish</button>
+        </center>
+
+        <fieldset>
+          <legend>
+            <label for="subscribe">Subscribe :</label>
+          </legend>
+          <form>
+            <label for="topic_s">Topic</label>
+            <input id="sub-topic" placeholder="MQTT">
+          </form>
+        </fieldset>
+        <br>
+        <center>
+          <button id="subscribe" onclick="subscribeFunc()">Subscribe</button>
+        </center>
+
+
+      </div>
+      
+      <ul id="messages"></ul>
+    </section>
+  </main>
+  <br><br><br><br>
+  <footer>
+    <div>
+      <a href ="#top">Back to top</a>
+          <h3>Stay Connected</h3>
+          <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" >
+              <img src="https://www.gft.eng.cam.ac.uk/gft-on-twitter/image">
+          </a>
+          <a href="https://www.facebook.com" >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2000px-Facebook_icon_2013.svg.png">
+          </a>
+          <a href="https://myaccount.google.com/">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKAGP4dUPjVwWXtDIb_R3NcEWAz07BwweeBXa1OU1NL7kLsfgY">
+          </a>
+    </div>
+    <div class="footer-left">
+      <p>About Me </p>
+      <p>Contact Me: 09101167718 or (02) 8821 1189</p>
+        <p>Visit her favorite websites:<br>
+          <a href="https://www.whoneedsmaps.com/about/" class="footer-left">@https://www.whoneedsmaps.com/about/</a><br>
+          <a href="https://aminearlythereyet.com/" class="footer-left">@https://aminearlythereyet.com/</a><br>
+          <a href="https://www.bemytravelmuse.com/ and many more" class="footer-left">@https://www.bemytravelmuse.com/</a><br>
+        </p>
+      <p>MarvieCauyan.copy2019.All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+<script src="scripts/browser-mqtt.js"></script>
+<script src="scripts/controller.js"></script>
+
+</html>
